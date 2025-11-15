@@ -62,36 +62,22 @@ npm run dev
 
 ## Backend
 
-
 - Navigate to the server directory and run:
-```
+
 npm run test
 
-
 - Uses Jest and Supertest.
-
-
 - Includes integration tests for API endpoints.
-
-
 - Uses mongodb-memory-server to mock the database.
 
-
-## Frontend
-
+## Frontent
 
 - Navigate to the client directory and run:
 
-```
 npm run test
 
-
 - Uses Vitest with React Testing Library.
-
-
 - Unit tests for React components (e.g., Button).
-
-
 - Integration tests for UI interactions.
 
 
