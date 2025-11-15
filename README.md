@@ -30,121 +30,119 @@ mern-testing/
 
 
 1. Clone the repository:
-   ```bash
+   ```
    git clone <your-repo-url>
    cd mern-bug-tracker
 
 2. Install backend dependencies:
-
-cd server
-npm install
+  ```
+   cd server
+   npm install
 
 
 3. Install frontend dependencies:
-
-cd ../client
-npm install
+  ```
+  cd ../client
+  npm install
 
 
 4. Start the backend server (default on port 5000):
-
+```
 npm run dev
 
 
 5. Start the frontend development server:
-
+```
 npm run dev
 
 
-6. Access the frontend at http://localhost:3000 (or as configured by Vite).
+
+### Running Tests
 
 
-Running Tests
+## Backend
 
 
-Backend
-
-
-Navigate to the server directory and run:
-
+- Navigate to the server directory and run:
+```
 npm run test
 
 
-Uses Jest and Supertest.
+- Uses Jest and Supertest.
 
 
-Includes integration tests for API endpoints.
+- Includes integration tests for API endpoints.
 
 
-Uses mongodb-memory-server to mock the database.
+- Uses mongodb-memory-server to mock the database.
 
 
-Frontend
+## Frontend
 
 
-Navigate to the client directory and run:
+- Navigate to the client directory and run:
 
-
+```
 npm run test
 
 
-Uses Vitest with React Testing Library.
+- Uses Vitest with React Testing Library.
 
 
-Unit tests for React components (e.g., Button).
+- Unit tests for React components (e.g., Button).
 
 
-Integration tests for UI interactions.
+- Integration tests for UI interactions.
 
 
-Debugging Techniques
+### Debugging Techniques
 
 
-Backend: Used console logs, Jest test outputs, and Node.js inspector for debugging.
+- Backend: Used console logs, Jest test outputs, and Node.js inspector for debugging.
 
 
-Frontend: Employed React Developer Tools, console logging, and Vitest test logs.
+- Frontend: Employed React Developer Tools, console logging, and Vitest test logs.
 
 
-Error Handling: Implemented Express error middleware and React Error Boundary to catch and handle errors gracefully.
+- Error Handling: Implemented Express error middleware and React Error Boundary to catch and handle errors gracefully.
 
 
-Testing and Debugging Approach
+### Testing and Debugging Approach
 
 
-Applied unit tests to individual functions and components.
+- Applied unit tests to individual functions and components.
 
 
-Developed integration tests to verify end-to-end API and UI workflows.
+- Developed integration tests to verify end-to-end API and UI workflows.
 
 
-Mocked external dependencies like the database during testing to isolate test environments.
+- Mocked external dependencies like the database during testing to isolate test environments.
 
 
-Introduced intentional bugs and used debugging tools to identify and resolve issues.
+- Introduced intentional bugs and used debugging tools to identify and resolve issues.
 
 
-Used error boundaries to prevent UI crashes on frontend.
-
-
-
-Additional Notes
-
-
-The frontend error boundary wraps the entire UI to catch runtime errors.
-
-
-Backend uses Express middleware for centralized error handling.
-
-
-Tests cover main CRUD operations and UI interactions.
+- Used error boundaries to prevent UI crashes on frontend.
 
 
 
-Screenshots
+### Additional Notes
 
 
-Backend Test Results: ./screenshots/backendtest.PNG
+- The frontend error boundary wraps the entire UI to catch runtime errors.
 
 
-Frontend Test Results: ./screenshots/frontendtest.PNG
+- Backend uses Express middleware for centralized error handling.
+
+
+- Tests cover main CRUD operations and UI interactions.
+
+
+
+### Screenshots
+
+
+[![Backend Test](./screenshots/backendtest.PNG)](./screenshots/backendtest.PNG)  
+
+
+[![Frontend Test](./screenshots/frontendtest.PNG)](./screenshots/frontendtest.PNG)
