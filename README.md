@@ -1,16 +1,5 @@
 # Testing and Debugging MERN Applications
 
-This assignment focuses on implementing comprehensive testing strategies for a MERN stack application, including unit testing, integration testing, and end-to-end testing, along with debugging techniques.
-
-## Assignment Overview
-
-You will:
-1. Set up testing environments for both client and server
-2. Write unit tests for React components and server functions
-3. Implement integration tests for API endpoints
-4. Create end-to-end tests for critical user flows
-5. Apply debugging techniques for common MERN stack issues
-
 ## Project Structure
 
 ```
@@ -36,52 +25,126 @@ mern-testing/
 └── package.json            # Project dependencies
 ```
 
-## Getting Started
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week6-Assignment.md` file
-4. Explore the starter code and existing tests
-5. Complete the tasks outlined in the assignment
+## Installation and Running the Project
 
-## Files Included
 
-- `Week6-Assignment.md`: Detailed assignment instructions
-- Starter code for a MERN application with basic test setup:
-  - Sample React components with test files
-  - Express routes with test files
-  - Jest and testing library configurations
-  - Example tests for reference
+1. Clone the repository:
+   ```bash
+   git clone <your-repo-url>
+   cd mern-bug-tracker
 
-## Requirements
+2. Install backend dependencies:
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Basic understanding of testing concepts
+cd server
+npm install
 
-## Testing Tools
 
-- Jest: JavaScript testing framework
-- React Testing Library: Testing utilities for React
-- Supertest: HTTP assertions for API testing
-- Cypress/Playwright: End-to-end testing framework
-- MongoDB Memory Server: In-memory MongoDB for testing
+3. Install frontend dependencies:
 
-## Submission
+cd ../client
+npm install
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
 
-1. Complete all required tests (unit, integration, and end-to-end)
-2. Achieve at least 70% code coverage for unit tests
-3. Document your testing strategy in the README.md
-4. Include screenshots of your test coverage reports
-5. Demonstrate debugging techniques in your code
+4. Start the backend server (default on port 5000):
 
-## Resources
+npm run dev
 
-- [Jest Documentation](https://jestjs.io/docs/getting-started)
-- [React Testing Library Documentation](https://testing-library.com/docs/react-testing-library/intro/)
-- [Supertest Documentation](https://github.com/visionmedia/supertest)
-- [Cypress Documentation](https://docs.cypress.io/)
-- [MongoDB Testing Best Practices](https://www.mongodb.com/blog/post/mongodb-testing-best-practices) 
+
+5. Start the frontend development server:
+
+npm run dev
+
+
+6. Access the frontend at http://localhost:3000 (or as configured by Vite).
+
+
+Running Tests
+
+
+Backend
+
+
+Navigate to the server directory and run:
+
+npm run test
+
+
+Uses Jest and Supertest.
+
+
+Includes integration tests for API endpoints.
+
+
+Uses mongodb-memory-server to mock the database.
+
+
+Frontend
+
+
+Navigate to the client directory and run:
+
+
+npm run test
+
+
+Uses Vitest with React Testing Library.
+
+
+Unit tests for React components (e.g., Button).
+
+
+Integration tests for UI interactions.
+
+
+Debugging Techniques
+
+
+Backend: Used console logs, Jest test outputs, and Node.js inspector for debugging.
+
+
+Frontend: Employed React Developer Tools, console logging, and Vitest test logs.
+
+
+Error Handling: Implemented Express error middleware and React Error Boundary to catch and handle errors gracefully.
+
+
+Testing and Debugging Approach
+
+
+Applied unit tests to individual functions and components.
+
+
+Developed integration tests to verify end-to-end API and UI workflows.
+
+
+Mocked external dependencies like the database during testing to isolate test environments.
+
+
+Introduced intentional bugs and used debugging tools to identify and resolve issues.
+
+
+Used error boundaries to prevent UI crashes on frontend.
+
+
+
+Additional Notes
+
+
+The frontend error boundary wraps the entire UI to catch runtime errors.
+
+
+Backend uses Express middleware for centralized error handling.
+
+
+Tests cover main CRUD operations and UI interactions.
+
+
+
+Screenshots
+
+
+Backend Test Results: ./screenshots/backendtest.PNG
+
+
+Frontend Test Results: ./screenshots/frontendtest.PNG
